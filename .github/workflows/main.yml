@@ -33,36 +33,15 @@ jobs:
           name: dist
           path: dist
   deploy:
-    runs-on: ubuntu-latest
-    # When application is successfully tested and build has been generated
-    # Then we can start with deployment
+    name: Deploy
     needs: build
-    steps:
-      # Download previously shared build
-      - name: Get artifact
-        uses: actions/download-artifact@v1
-        with:
-          name: react-github-actions-build
-  release:
     runs-on: ubuntu-latest
-    # We specify that deploys needs to
-    # finish before we create a release
-    needs: deploy
     steps:
-      # Download previously shared build
-      - name: Get artifact
-        uses: actions/download-artifact@v1
+      - name: Checkout repository
+        uses: actions/checkout@main
+      - name: Download artifact
+        uses: actions/download-artifact@main
         with:
-          name: react-github-actions-build
-      # Zip the build using external action
-      - name: Zip build
-        uses: thedoctor0/zip-release@master
-        with:
-          filename: react-github-actions-release-build.zip
-          path: react-github-actions-build
-      # Upload as an artifact of the current workflow
-      - name: Upload build zip artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: react-github-actions-release-build.zip
-          path: react-github-actions-release-build.zip
+          name: dist
+          path: dist
+
