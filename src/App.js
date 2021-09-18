@@ -1,12 +1,14 @@
-import './App.css';
+import "./App.scss";
+import Navbar from "./App/Navbar/Navbar";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Teseca Website</h1>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+      </div>
+    </Router>
   );
 }
 
