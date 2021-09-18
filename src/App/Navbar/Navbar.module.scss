@@ -1,0 +1,73 @@
+@import "../../theme/colors";
+
+.navbar {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.nav {
+  width: 90%;
+  max-width: 1200px;
+  margin: 5px auto;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  > div {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  > div:last-child {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  > div:not(:first-child):not(:last-child) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.logo {
+  display: flex;
+  flex: 1;
+}
+
+.switch {
+  margin: 5px 30px 0 30px;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.navTabs {
+  font-weight: 500;
+}
+
+.navBtn {
+  background-color: $primary;
+  width: 155px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  &:hover {
+    background-color: $hover;
+    color: #fff !important;
+  }
+  &:active {
+    background-color: $active;
+    color: #fff !important;
+  }
+  &:focus {
+    background-color: $active;
+    color: #fff !important;
+  }
+  &:disabled {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    color: rgba(0, 0, 0, 0.25) !important;
+  }
+}
