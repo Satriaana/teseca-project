@@ -1,0 +1,51 @@
+.contintro {
+    margin: 5;
+    padding: 40px 0px;
+  }
+
+  .contentintro{
+    margin: 0px auto !important;
+    padding-left: 5px 0;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    }
+  
+  .ContintroCardWrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: left; 
+  }
+  
+  .card {
+
+    justify-content: right;
+    align-items: right;
+    text-align: justify;
+    > h1 {
+      width: 70%;
+    }
+  }  
+
+  .topcard {
+      //background-color: $primary;
+      width: 280px;
+      //font-weight: 500;
+      color: #F1F1F1;
+      border: none;
+      border-radius: 20px;
+      align-content: center;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .card {
+      flex-direction: column;
+      text-align: right;
+      h1 {
+        width: 90%;
+      }
+      
+    
+  }
+}
