@@ -1,4 +1,5 @@
 import { Tabs } from "antd";
+import  CardComponent  from "../../Components/Card";
 
 const { TabPane } = Tabs;
 
@@ -8,6 +9,7 @@ const Menu = () => {
       <Tabs defaultActiveKey="1" centered>
         <TabPane tab="Home" key="1">
           Home
+          <CardComponent title="dinushi" description="hi kohomada oyalata"/>
         </TabPane>
         <TabPane tab="Food" key="2">
           Food
