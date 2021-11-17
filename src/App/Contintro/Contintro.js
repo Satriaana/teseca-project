@@ -13,20 +13,17 @@ const Contintro = () => {
           border="no-border"
           shadow="medium"
         >
-          <Row>
-            <Col lg={12} md={12} sm={12} xs={24}>
+          <Row align="middle">
+            <Col lg={12}>
               <Image 
-              width={550}
               src={contentintro}
               preview={false}
-        
-              className={classNames.contentintro}>
-
-              </Image>
+              style={{padding: "5px"}}
+               />
             
             </Col>
             
-            <Col lg={12} md={12} sm={12} xs={24}>
+            <Col lg={12} >
               <div className={classNames.card}>
                 <Card  className={classNames.topcard}
                 style={{ backgroundColor: "#F1F1F1" }}
